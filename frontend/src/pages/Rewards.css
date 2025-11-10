@@ -1,0 +1,136 @@
+.rewards h1 {
+  margin-bottom: 8px;
+  color: #1f2937;
+}
+
+.page-subtitle {
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+.rewards-table {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1.5fr 2fr 2fr;
+  gap: 16px;
+  padding: 12px 16px;
+  background: #f9fafb;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1.5fr 2fr 2fr;
+  gap: 16px;
+  padding: 16px;
+  border-bottom: 1px solid #e5e7eb;
+  align-items: center;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-row:hover {
+  background: #f9fafb;
+}
+
+.table-cell {
+  font-size: 14px;
+  color: #1f2937;
+}
+
+.stock-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: #dbeafe;
+  color: #1e40af;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.event-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: #f3f4f6;
+  color: #374151;
+  border-radius: 4px;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.reference-id {
+  font-family: monospace;
+  font-size: 12px;
+  color: #6b7280;
+  background: #f9fafb;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.summary-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.summary-item {
+  padding: 20px;
+  background: #f9fafb;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.summary-label {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.summary-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+@media (max-width: 1024px) {
+  .table-header,
+  .table-row {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .table-cell:nth-child(4),
+  .table-cell:nth-child(5) {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .table-header,
+  .table-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .table-cell {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .table-cell::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #6b7280;
+  }
+}
+
